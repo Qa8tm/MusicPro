@@ -88,10 +88,7 @@ async def skip(client, m: Message):
             await m.reply(OP)
 
 
-@Client.on_message(
-    command(["stop", f"stop@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME}", "vstop"])
-    & other_filters
-)
+@Client.on_message(command(["stop", f"stop@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME}", "vstop"]) & other_filters )
 @authorized_users_only
 async def stop(client, m: Message):
     chat_id = m.chat.id
@@ -106,9 +103,7 @@ async def stop(client, m: Message):
         await m.reply("❌ **لا شيء في التشغيل**")
 
 
-@Client.on_message(
-    command(["pause", f"pause@{BOT_USERNAME}", "vpause"]) & other_filters
-)
+@Client.on_message(command(["pause", f"pause@{BOT_USERNAME}", "vpause"]) & other_filters )
 @authorized_users_only
 async def pause(client, m: Message):
     chat_id = m.chat.id
@@ -124,9 +119,7 @@ async def pause(client, m: Message):
         await m.reply("❌ **لا شيء في التشغيل**")
 
 
-@Client.on_message(
-    command(["resume", f"resume@{BOT_USERNAME}", "vresume"]) & other_filters
-)
+@Client.on_message(command(["resume", f"resume@{BOT_USERNAME}", "vresume"]) & other_filters )
 @authorized_users_only
 async def resume(client, m: Message):
     chat_id = m.chat.id
@@ -142,9 +135,7 @@ async def resume(client, m: Message):
         await m.reply("❌ **لا شيء في التشغيل**")
 
 
-@Client.on_message(
-    command(["mute", f"mute@{BOT_USERNAME}", "vmute"]) & other_filters
-)
+@Client.on_message(command(["mute", f"mute@{BOT_USERNAME}", "vmute"]) & other_filters )
 @authorized_users_only
 async def mute(client, m: Message):
     chat_id = m.chat.id
@@ -160,9 +151,7 @@ async def mute(client, m: Message):
         await m.reply("❌ **لا شيء في التشغيل**")
 
 
-@Client.on_message(
-    command(["unmute", f"unmute@{BOT_USERNAME}", "vunmute"]) & other_filters
-)
+@Client.on_message(command(["unmute", f"unmute@{BOT_USERNAME}", "vunmute"]) & other_filters )
 @authorized_users_only
 async def unmute(client, m: Message):
     chat_id = m.chat.id
@@ -277,9 +266,7 @@ async def cbunmute(_, query: CallbackQuery):
         await query.answer("❌ لا شيء يشغل حاليا", show_alert=True)
 
 
-@Client.on_message(
-    command(["volume", f"volume@{BOT_USERNAME}", "vol"]) & other_filters
-)
+@Client.on_message(command(["volume", f"volume@{BOT_USERNAME}", "vol"]) & other_filters )
 @authorized_users_only
 async def change_volume(client, m: Message):
     range = m.command[1]
