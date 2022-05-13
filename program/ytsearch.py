@@ -39,7 +39,7 @@ async def ytsearch(_, message: Message):
         i = 0
         text = ""
         while i < 5:
-            text += f"🏷 **Name:** __{results[i]['title']}__\n"
+            text += f"🏷 **العنوان:** __{results[i]['title']}__\n"
             text += f"⏱ **المده:** `{results[i]['duration']}`\n"
             text += f"👀 **المشاهدات:** `{results[i]['views']}`\n"
             text += f"📣 *القناه:** {results[i]['channel']}\n"
