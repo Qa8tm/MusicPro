@@ -81,12 +81,12 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "᥀︙لشراء بوت ممثال .", url=f"https://t.me/{GROUP_SUPPORT}"                
+                        "᥀︙لشراء بوت مماثل .", url=f"https://t.me/{GROUP_SUPPORT}"                
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "᥀︙ قناة السورس .", url="https://t.me/jepthon"
+                        "᥀︙ قناة السورس .", url="https://t.me/ADWSL"
                     )
                 ],
             ]
@@ -126,9 +126,9 @@ async def alive(client: Client, message: Message):
 @Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("pinging...")
+    m_reply = await message.reply_text("يرجــى الانتظار...")
     delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("🏓 `السـرعـه!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
 
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
